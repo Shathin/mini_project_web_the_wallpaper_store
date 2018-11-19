@@ -29,14 +29,16 @@
 {
     color: #7DC1F0;
 }
-i.icon {
-    font-size : 150%;
+i.icon.images {
+    font-size : 80%;
 }
+
 
 #heading
 {
-    font-family: 'Federant', cursive;
-    font-size: 3em;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+    font-size: 3.8em;
 }
 /* ====================================================================== */
 /* ====================================================================== */
@@ -52,6 +54,48 @@ i.icon {
     border: none;
     padding: 0;
 }
+input {
+    color : black;
+    border: solid 1px rgba(0, 0, 0, 0.6);
+}
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-style: italic;
+    font-size: 1.2em;
+  }
+input::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-style: italic;
+    font-size: 1.2em;
+  }
+input:-ms-input-placeholder { /* IE 10+ */
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-style: italic;
+    font-size: 1.2em;
+  }
+input:-moz-placeholder { /* Firefox 18- */
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-style: italic;
+    font-size: 1.2em;
+  }
+.modal-title
+{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 2.3em;
+}
+
+#passwordValidity
+{
+    max-height : 0px;
+    position: relative;
+    font-size: 1em;
+    color: red;
+    text-align: left;
+    padding-left: 6.8%;
+    top : -10px;
+}
+
 .alignment
 {
     margin: 27vh auto !important;
@@ -92,6 +136,26 @@ i.icon {
     text-align : center;
 }   
 
+#newPassword
+{
+    width: 18.3vw;
+}
+
+#rulesButton {
+    text-decoration: none;
+}
+
+i.icon.info {
+    padding-left : 8px;
+    padding-top : 1px;
+    font-size : 19px;
+}
+
+#passwordRulesModal {
+    position : relative;
+    top : 10px;
+    left : 27vw;
+}
 
 /* ====================================================================== */
 /* ====================================================================== */
@@ -148,8 +212,16 @@ i.icon {
     border-bottom-left-radius: 5px;
 }
 
-.ui.vertical.tabular.menu .active.item:hover {
+.ui.vertical.tabular.menu .activeCat.item:hover {
     background : rgba(255,255,255,1);
+}
+
+.ui.vertical.tabular.menu .active-category.item {
+    background: none #FFFFFF;
+    color: rgba(0, 0, 0, 0.95);
+    border-color: #D4D4D5;
+    margin: 0px -1px 0px 0px;
+    border-radius: 0.28571429rem 0px 0px 0.28571429rem !important;
 }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -172,7 +244,7 @@ i.icon {
     opacity: 0.4;
     filter: blur(5px);
     -webkit-filter: blur(5px);
-    pointer-events : none;
+    /* pointer-events : none; */
 }
 .thumb {
     height:auto; 
@@ -207,6 +279,19 @@ i.icon {
     top: 53%;
     left: 50%;
     transform : translate(-50%, -50%);
+    animation: zoomIn 0.25s linear;
+}
+@keyframes zoomIn { 
+    from { 
+      opacity: 0; 
+      height: 0;
+      animation-timing-function: ease-in;
+    }
+    to {
+      opacity: 1;
+      height: 87vh;
+      animation-timing-function: ease-out;
+    }
 }
 
 .ui.fluid.bordered.image.hidden {
@@ -229,6 +314,13 @@ i.icon {
     font-size: 200%;
 }
 
+
+/* Modal */
+@media (min-width: 768px) {}
+.modal-dialog {
+    width: 25% !important;
+    margin: 30px auto;
+}
 
 
 

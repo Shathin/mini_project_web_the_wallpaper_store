@@ -11,8 +11,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="assets/js/wallpaperLogic.js"></script>
-        
-        <link href="https://fonts.googleapis.com/css?family=Federant|Saira+Extra+Condensed|Tajawal:500" rel="stylesheet">
+        <script src="assets/js/regFieldValidation.js"></script>
+        <script src="assets/js/modal.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Federant|Saira+Extra+Condensed|Tajawal:500,700" rel="stylesheet">
     </head>
     <body id="main">
         <?php 
@@ -21,7 +22,7 @@
         
         <!-- Nav bar code goes here -->
         <div class="ui secondary menu custom-menu" >
-            <a id="heading" class="item"  href="index.html">
+            <a id="heading" class="item"  href="wallpapers.php?cat=Abstract">
             <i class="images icon"></i> 
                 The Wallpaper Store
             </a>
@@ -64,7 +65,7 @@
                             {
                                 if($category[0] == $_GET['cat'])
                                 {
-                                    echo "<span class='item category'>
+                                    echo "<span class='item category active-category'>
                                         ".$category[0]."
                                     </span>";
                                 }
@@ -79,7 +80,6 @@
                     </div>
                 </div>
                 <!-- Containes the images -->
-                
                     <div class="fourteen wide stretched column">
                     <div class="scroll">
                         <div class="ui segment">
@@ -175,29 +175,32 @@
                         <form action="registration.php" method="POST">
                             <div class="form-items">
                                 <div class="ui input">
-                                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                                    <input type="text" id="username" name="username" placeholder="Enter your username">
                                 </div>
                             </div>
                             <div class="form-items">
                                 <div class="ui input">
-                                    <input type="text" name="email" id="email" placeholder="Enter your e-mail ID" required>
+                                    <input type="text" name="email" id="email" placeholder="Enter your e-mail ID">
                                 </div>  
                             </div>
                             <div class="form-items">
                                 <div class="ui input">
-                                    <input type="password" name="password" id="newPassword" placeholder="Enter your password" required>
+                                    <input type="password" name="password" id="newPassword" placeholder="Enter your password">
+                                    <a id="rulesButton" data-toggle='modal' data-target='#passwordRulesModal'><i class="info circle icon"></i></a>
                                 </div>
+                            </div>
+                            <div id="passwordValidity" class="form-items"> 
                             </div>
                             <div class="form-items">
                                 <div class="ui input">
-                                    <input type="password" name="password" id="confirmPassword" placeholder="Retype the chosen password" onChange="checkPasswordMatch();" required>
+                                    <input type="password" name="password" id="confirmPassword" placeholder="Retype the chosen password">
                                 </div>
                             </div>
                             <div class="form-items">
                                 <div class="ui buttons">
                                     <input type="reset" value="Reset" class="ui button active">
                                     <div class="or"></div>
-                                    <button class="ui positive button">Register</button>
+                                    <button class="ui positive button" id="registerButton" disabled>Register</button>
                                 </div>
                             </div>
                         </form>
@@ -205,21 +208,24 @@
                   </div>
               </div>
             </div>
-            <script> 
-                $("#failedUser").click(function(){$('#loginModal .close').click();});
-                $(document).ready(function () {
-                       $("#confirmPassword").keyup(checkPasswordMatch);
-                       $("#newPassword").keyup(checkPasswordMatch);
-                    });
-                function checkPasswordMatch() {
-                var password = $("#newPassword").val();
-                var confirmPassword = $("#confirmPassword").val();
-                if (password != confirmPassword)
-                    $("#confirmPassword").css("border-color","red");
-                else
-                    $("#confirmPassword").css("border-color","green");
-                }
-            </script>
+        </div>
+        <div class="modal fade" id="passwordRulesModal" role="dialog">
+            <div class="modal-dialog alignment">
+              <div class="modal-content size">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Rules</h4>
+                  </div>
+                  <div class="modal-body">
+                     Password must :
+                     <br> &nbsp; &nbsp; - be atleast 8 characters in length
+                     <br> &nbsp; &nbsp; - contain atleast one small letter
+                     <br> &nbsp; &nbsp; - contain atleast one capital letter
+                     <br> &nbsp; &nbsp; - contian atleast one number
+                     <br> &nbsp; &nbsp; - contain atleast one special symbol. 
+                  </div>
+              </div>
+            </div>
         </div>
         <img class="ui fluid bordered image hidden" id="popUp" src="">
     </body>

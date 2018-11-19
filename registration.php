@@ -13,6 +13,8 @@
         {
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
+            $_SESSION['usernamecheck'] =  true;
+            $_SESSION['passwordcheck'] = true;
             header('location: wallpapers.php?cat=Abstract');   
         }        
     }

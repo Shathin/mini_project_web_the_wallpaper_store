@@ -9,13 +9,20 @@ window.setTimeout(function() {
 
     var category = document.querySelectorAll(".category"); // Returns a node list objects of each category on the screen
 
+
     // Iterating through each item in the NodeList
     images.forEach(function(image) {
         // Adding on click event listener to each image object
         image.addEventListener("click", function() {
-            popUpImg.src = this.src;
-            popUpImg.classList.remove("hidden");
-            background.classList.add("backFadeOut");
+            if(image.classList.contains("premium")) {
+                // Open login modal
+                $('#loginModal').modal();
+            }
+            else {
+                popUpImg.src = this.src;
+                popUpImg.classList.remove("hidden");
+                background.classList.add("backFadeOut");
+            }
         });
     });
 
@@ -25,10 +32,28 @@ window.setTimeout(function() {
         if(event.target != popUpImg) {
             // If what you clicked isn't an image
             if(!(event.target instanceof Image)) {
-                // Hide the image
-                popUpImg.classList.add("hidden");
-                popUpImg.classList.add("fadeOut");
-                background.classList.remove("backFadeOut");
+                var currentHeight = 87;
+                var zoomOutInterval = setInterval(zoomOut, 1);
+                // Closing pop up image animation
+                function zoomOut() {
+                    if(popUpImg.style.height == "0vh") {
+                        clearInterval(zoomOutInterval);
+                        // Hide the image
+                        popUpImg.classList.add("hidden");
+                        popUpImg.classList.add("fadeOut");
+                        background.classList.remove("backFadeOut");
+                        console.log("Clearing . . .")
+                        currentHeight = 87;
+                        popUpImg.style.height = currentHeight + "vh";
+                    }
+                    else {  
+                        popUpImg.style.height = currentHeight + "vh";
+                        currentHeight -= 1.5;
+                        console.log("Running . . . > " + currentHeight);
+                    }
+                }
+
+
             }
         }
     })

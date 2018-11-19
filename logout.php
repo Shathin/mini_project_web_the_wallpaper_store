@@ -2,6 +2,8 @@
     session_start();
     unset($_SESSION['username']);
     unset($_SESSION['loggedin']);
+    unset($_SESSION['usernmecheck']);
+    unset($_SESSION['passwordcheck']);
     session_destroy();
-    header('location:index.html');
+    header('location:wallpapers.php?cat=Abstract');
 ?>
