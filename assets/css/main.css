@@ -1,0 +1,243 @@
+#main {
+    background: #111;
+}
+
+
+/* ====================================================================== */
+                    /* NAV BAR */
+
+/* Background color of the menu (Nav-bar) */
+.ui.secondary.menu.custom-menu{
+    position: relative;
+    height: 50px;
+    background-color : #1B1C1D;
+    z-index : 10;
+}
+
+/* Text color of the items in the menu (Nav-bar) */
+.ui.secondary.menu .item {
+    color : whitesmoke;
+    font-size : 2.3em;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    padding: 0;
+}
+.ui.menu .item
+{
+    padding: 0;
+}
+#heading:hover, #login:hover, #logout:hover, #register:hover
+{
+    color: #7DC1F0;
+}
+i.icon {
+    font-size : 150%;
+}
+
+#heading
+{
+    font-family: 'Federant', cursive;
+    font-size: 3em;
+}
+/* ====================================================================== */
+/* ====================================================================== */
+
+/* ====================================================================== */
+                    /* REGISTER & LOGIN*/
+
+.ui.segment
+{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    padding: 0;
+}
+.alignment
+{
+    margin: 27vh auto !important;
+}
+.modal-title
+{
+    text-align: center;
+}
+.modal-content.size 
+{
+    width: 27vw;
+    margin: auto;
+}
+.incorrect
+{
+    color: red;
+}
+
+.ui.segment.form > .ui.huge.header {
+    padding-top: 2%;
+    color : white;
+}
+/* Setting input text box size in register and login pages */
+.ui.form input[type="text"] {
+    width : 20vw;
+}
+
+.ui.form input[type="password"] {
+    width : 20vw;
+}
+
+/* Providing spacing between the items of the form */
+.form-items {
+    margin : 1.5em;
+}
+
+.ui.segment.form {
+    text-align : center;
+}   
+
+
+/* ====================================================================== */
+/* ====================================================================== */
+
+
+/* ====================================================================== */
+                    /* SCROLL */
+.scroll {
+    position:absolute; 
+    top:0px;
+    width:100%; 
+    Height:100%; 
+    overflow-y:auto; 
+    overflow-x:hidden; 
+    z-index : 0;     
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #FFF;
+}
+.dark {
+    background : #111;
+}
+
+.ui.segment:last-child {
+    background : inherit;
+}
+
+    
+.ui.vertical.tabular.menu .item {
+    color : #FFF;
+}
+/* ------------------------------------------------- */
+                    /* GRID */
+.ui.grid {
+    position: relative;
+    margin-top : 5%;
+    padding-left : 2.5%;
+    padding-right : 2%;
+    z-index: inherit;
+}
+
+.ui.segment {
+    padding-top: 0px;
+}
+.fourteen.wide.stretched.column {
+    background: rgba(0,0,0,0);
+    height : 89.6%;
+}
+
+.ui.vertical.tabular.menu .item:hover {
+    background : rgba(254,254,254,0.15);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.ui.vertical.tabular.menu .active.item:hover {
+    background : rgba(255,255,255,1);
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+                    /* IMAGES */
+.ui.segment.thumbnail {
+    background : #111;
+    -moz-box-shadow: 0 0 0 #111111;
+    -webkit-box-shadow: 0 0 0 #111111;
+    box-shadow: 0 0 0 #111111;
+    border : none; 
+    
+}
+.pointer 
+{
+    cursor: pointer;
+}
+
+.premium
+{
+    opacity: 0.4;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    pointer-events : none;
+}
+.thumb {
+    height:auto; 
+    width:25vw;
+    border-radius: 15px;
+}
+.ui.three.column.grid > .column {
+    align-self: center;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* ------------------------------------------------- */
+
+/* ------------------------------------------------- */
+                    /* POP UP IMAGE */
+.ui.fluid.bordered.image {
+    background: #111;
+    border:none;
+    /* box-shadow: 5px 5px 5px #999999; */
+    -moz-box-shadow: 0 0 50px #000;
+    -webkit-box-shadow: 0 0 50px #000;
+    box-shadow: 0 0 50px #000;
+    border-radius:10px;
+    height: 87vh;
+    width: inherit;
+    z-index : 5;
+    /* Positioning image to the center of the screen */
+    position : absolute;
+    top: 53%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+}
+
+.ui.fluid.bordered.image.hidden {
+    display : none;
+}
+
+.backFadeOut {
+    filter : blur(5px); 
+    pointer-events : none;
+}
+
+/* ------------------------------------------------- */
+
+/* ====================================================================== */
+/* ====================================================================== */
+                             /*SIDE BAR */
+.item.category
+{
+    font-family: 'Tajawal', sans-serif;
+    font-size: 200%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
