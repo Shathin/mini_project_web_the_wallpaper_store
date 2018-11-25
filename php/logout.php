@@ -5,5 +5,5 @@
     unset($_SESSION['usernamecheck']);
     unset($_SESSION['passwordcheck']);
     session_destroy();
-    header('location:../wallpapers.php?cat=Abstract');
+    header('location:../wallpapers.php?cat=Abstract&page=1');
 ?>
