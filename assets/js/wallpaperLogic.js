@@ -3,12 +3,9 @@ window.setTimeout(function() {
     
     var popUpImg = document.querySelector("#popUp"); // Pop up image object
 
-    var images = document.querySelectorAll(".thumb"); // Returns a node list containing objects of each image on the screen
+    var images = document.querySelectorAll(".img-fluid.img-thumbnail"); // Returns a node list containing objects of each image on the screen
 
-    var background = document.querySelector(".scroll"); // Background > Used for fadeout effect and closing pop up
-
-    var category = document.querySelectorAll(".category"); // Returns a node list objects of each category on the screen
-
+    var background = document.querySelector("#wallpaper-screen"); // Background > Used for fadeout effect and closing pop up
 
     // Iterating through each item in the NodeList
     images.forEach(function(image) {
@@ -19,12 +16,18 @@ window.setTimeout(function() {
                 $('#loginModal').modal();
             }
             else {
-                popUpImg.src = this.src;
-                popUpImg.classList.remove("hidden");
+                
+                popUpImg.src = fixURL(this.src);
                 background.classList.add("backFadeOut");
+                popUpImg.classList.remove("hidden");
+                // background.classList.add("backFadeOut");
             }
         });
     });
+
+    function fixURL(url) {
+        return "https://hdqwalls.com/wallpapers/" + url.substring(51);
+    }
 
     // Adding event listener to windows > Used for closing the pop up image when clicked anywhere outside the image
     window.addEventListener("click", function(event) {
@@ -52,25 +55,8 @@ window.setTimeout(function() {
                         console.log("Running . . . > " + currentHeight);
                     }
                 }
-
-
             }
         }
     })
-
-    // Iterates through each of the item in the NodeList
-    category.forEach(function(clickedCategory) {
-        // Gets the name of the category present in the url (cat=Category)
-        var categoryName = window.location.href.substring(54,);
-
-        // Checks if the clicked category and the category name in the url is the same
-        // If same, makes item active (selected)
-        if(clickedCategory.textContent.trim() !== categoryName) {
-            clickedCategory.classList.remove("active");
-        }
-        else {
-            clickedCategory.classList.add("active");
-        }
-    });
 
 }, 500);

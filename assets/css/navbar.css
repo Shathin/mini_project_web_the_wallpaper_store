@@ -1,0 +1,43 @@
+.navbar-brand > .brand-image {
+    position: relative;
+    height : auto;
+    width : 25px;
+    display : inline;
+    top : -3px;
+}
+
+.navbar-brand {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size : 2.3em;
+}
+
+.nav.navbar-nav.navbar-right {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size : 1.5em;
+    padding-top : 9px;
+    padding-bottom : 5px;
+    text-align : center; 
+}
+
+.navbar-text {
+    margin-top : 0px;
+    margin-bottom : 0px;
+}
+
+#login, #register, #logout {
+    padding-left : 2px;
+    padding-right : 2px;
+}
+
+#heading:hover, #login:hover, #logout:hover, #register:hover
+{
+    cursor : pointer;
+    color: #7DC1F0;
+}
+
+.col-md-2.navbar > .navbar-toggle.collapsed {
+    background-color : #333;
+    border : #333;
+    float : left;
+    width : 100%;
+}

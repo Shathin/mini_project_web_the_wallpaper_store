@@ -1,0 +1,36 @@
+/* Modal */
+.modal-body {
+    margin-left : 20%;
+    margin-right : 20%;
+}
+.modal-title {
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Form */
+.form-group > .form-control {
+    width : 100%;
+}
+
+#form-button{
+    margin-left : 20%;
+    margin-right : 15%;
+}
+
+#form-button > * {
+    margin-left : 2%;
+    margin-right : 2%;
+    margin-top : 2%;
+}
+
+.form-control-feedback {
+    pointer-events: all;
+    cursor : pointer;
+}
+
+.glyphicon.glyphicon-info-sign {
+    font-size : 19px;
+}
+
+

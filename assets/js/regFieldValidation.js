@@ -6,8 +6,8 @@ window.setTimeout(function() {
     var passwordValidityMessage = document.querySelector("#passwordValidity");
     var newPassword = document.querySelector("#newPassword");
     var confirmPassword = document.querySelector("#confirmPassword");
-
     var registerButton = document.querySelector("#registerButton");
+    var reset = document.querySelector("#reset");
     
     // A variable's value which determines whether registration button must be clickable or not
     var isEmailSet = false;
@@ -16,11 +16,7 @@ window.setTimeout(function() {
     var isConfirmPasswordSet = false;
 
     username.addEventListener("input", function() {
-
-        // Check username availability
-
-
-        // temp 
+        
         isUsernameSet = true;
 
         if(isEmailSet && isNewPasswordSet && isConfirmPasswordSet && isUsernameSet) {
@@ -37,19 +33,15 @@ window.setTimeout(function() {
         var content = email.value;
         var email_re = /\S+@\S+\.\S+/;
         if(!content.match(email_re)) {
-            console.log("Email Invalid!");
-            // A small pop up that prints invalid
             isEmailSet = false;
         }
         else {
-            console.log("Email Valid");
             isEmailSet = true;
         }
         if(isEmailSet && isNewPasswordSet && isConfirmPasswordSet && isUsernameSet) {
             registerButton.disabled = false;
         }
         else {
-            console.log("Not yet set!");
             registerButton.disabled = true;
         }
     });
@@ -58,14 +50,10 @@ window.setTimeout(function() {
         var content = newPassword.value;
         var content_re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         if(!content.match(content_re)) {
-            console.log("Password invalid");
-            // A small pop up that prints invalid
             isNewPasswordSet = false;
-            passwordValidityMessage.textContent = "Password Invalid!";
         }
         else {
             console.log("Password valid!");
-            passwordValidityMessage.textContent = "";
             isNewPasswordSet = true;
         }
         passwordCheck();
@@ -85,7 +73,6 @@ window.setTimeout(function() {
         var content = confirmPassword.value;
         if(newPasswordContent !== content) {
             console.log("Passwords not matching!");
-            // A small pop up that prints invalid
             confirmPassword.style.borderColor = "red";
             isConfirmPasswordSet = false;
         }
@@ -102,5 +89,13 @@ window.setTimeout(function() {
             registerButton.disabled = true;
         }
     }
+
+    reset.addEventListener("click", function() {
+        // isEmailSet = false;
+        isUsernameSet = false;
+        isNewPasswordSet = false;
+        isConfirmPasswordSet = false;
+        registerButton.disabled = true;
+    });
 
 }, 500);
