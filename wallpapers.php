@@ -71,7 +71,7 @@
                     </div>
 
                     <li class="dropdown" id="categoryDrop" >
-                        <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <div class="list-group">
                                 <?php

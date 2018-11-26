@@ -48,14 +48,16 @@
 }
 
 .dropdown-menu {
+    position: relative;
     background: #111;
+    width : 90%;
+    left : 5vw;
 }
 
 #categoryDrop {
     z-index : 1000; 
     position : fixed;
     top : 8vh;
-    left : 10px;
     display : block;
     min-width : inherit;
     width : 100%;
