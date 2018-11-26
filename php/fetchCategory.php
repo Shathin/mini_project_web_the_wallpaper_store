@@ -12,7 +12,7 @@
         }
         else
         {
-            echo "<li class='list-group-item' onclick='location.href=\"wallpapers.php?cat=".$category[0]."&page=1\";'><a href='wallpapers.php?cat=".$category[0]."&page=1'>
+            echo "<li class='list-group-item' onclick='location.href=\"wallpapers.php?cat=".$category[0]."&page=1&error=No\";'><a href='wallpapers.php?cat=".$category[0]."&page=1&error=No'>
                 ".$category[0]."
             </a></li>";
         }

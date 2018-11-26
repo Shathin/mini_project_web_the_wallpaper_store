@@ -8,29 +8,27 @@
             <div class="modal-body">
                 <form action="php/registration.php" method="POST">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter your Username">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter your e-mail ID">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter your E-Mail ID">
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="password" class="form-control" id="newPassword" name="password" placeholder="Enter your password">
+                        <input type="password" class="form-control" id="newPassword" name="password" placeholder="Enter your Password">
                         <a id="rulesButton" data-toggle='modal' data-target='#passwordRulesModal' class="glyphicon glyphicon-info-sign form-control-feedback"></a>
                     </div>  
                     <div class="form-group">
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Retype the chosen password">
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Retype the Password">
                     </div>  
-                    <div class="form-group" id="form-button">
-                        <input type="reset" id="reset" value="Reset" class="btn btn-lg btn-danger">
-                        <input type="submit" id="registerButton" value="Register" class="btn btn-lg btn-success" disabled>
+                    <div class="form-group" id="register-form-button">
+                        <input type="reset" id="reset" value="Reset" class="btn btn-md btn-danger">
+                        <input type="submit" id="registerButton" value="Register" class="btn btn-md btn-success" disabled>
                     </div>
                 </form> 
-            </div>
             </div>
         </div>
     </div>
 </div>
-
 <div class="modal fade" id="passwordRulesModal" role="dialog">
     <div class="modal-dialog alignment">
         <div class="modal-content size">

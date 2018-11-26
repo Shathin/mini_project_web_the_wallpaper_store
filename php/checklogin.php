@@ -18,16 +18,16 @@
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $username;
                 $_SESSION['passwordcheck'] = true;
-                header('location: ../wallpapers.php?cat=Abstract&page=1');
+                header('location: ../wallpapers.php?cat=Abstract&page=1&error=No');
             }
             else
             {
                 $_SESSION['passwordcheck'] = false;
-                header('location: ../wallpapers.php?cat=Abstract&page=1');
+                header('location: ../wallpapers.php?cat=Abstract&page=1&error=Yes');
             }
         }
         else
             $_SESSION['usernamecheck'] = false;
-            header('location: ../wallpapers.php?cat=Abstract&page=1');
+            header('location: ../wallpapers.php?cat=Abstract&page=1&error=Yes');
     }
 ?>

@@ -1,5 +1,5 @@
 <?php
-    if((isset($_SESSION['usernamecheck']) && !$_SESSION['usernamecheck']) ||(isset($_SESSION['passwordcheck']) && !$_SESSION['passwordcheck']))
+    if(((isset($_SESSION['usernamecheck']) && !$_SESSION['usernamecheck']) ||(isset($_SESSION['passwordcheck']) && !$_SESSION['passwordcheck'])) && $_GET['error'] == 'Yes')
     {
         $f = '{';
         echo "<script> $(document).ready(function()".$f."$('#loginModal').modal()}); </script>";

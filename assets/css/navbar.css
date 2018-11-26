@@ -9,6 +9,7 @@
 .navbar-brand {
     font-family: 'Saira Extra Condensed', sans-serif;
     font-size : 2.3em;
+    font-weight: 500;
 }
 
 .nav.navbar-nav.navbar-right {
@@ -25,12 +26,11 @@
 }
 
 #login, #register, #logout {
-    padding-left : 2px;
+    padding-left : 10px;
     padding-right : 2px;
 }
 
-#heading:hover, #login:hover, #logout:hover, #register:hover
-{
+#heading:hover, #login:hover, #logout:hover, #register:hover, #brand:hover {
     cursor : pointer;
     color: #7DC1F0;
 }

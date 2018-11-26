@@ -15,7 +15,7 @@
             $_SESSION['username'] = $username;
             $_SESSION['usernamecheck'] =  true;
             $_SESSION['passwordcheck'] = true;
-            header('location: wallpapers.php?cat=Abstract');   
+            header('location: wallpapers.php?cat=Abstract&page=1&error=No');   
         }        
     }
 ?>
