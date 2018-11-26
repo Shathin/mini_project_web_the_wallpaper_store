@@ -45,7 +45,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a id="brand" class="navbar-brand" href="wallpapers.php?cat=Abstract&page=1&error=No">
-                        <img src="assets/icons/gallery.png" class="brand-image">
+                        <img src="assets/icons/gallery.png" class="brand-image pointer">
                         The Wallpaper Store
                     </a>
                 </div>

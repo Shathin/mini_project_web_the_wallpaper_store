@@ -25,9 +25,13 @@
     margin-bottom : 0px;
 }
 
-#login, #register, #logout {
+#login, #register {
     padding-left : 10px;
-    padding-right : 2px;
+    padding-right : 5px;
+}
+#logout {
+    padding-left : 10px;
+    padding-right : 10px;
 }
 
 #heading:hover, #login:hover, #logout:hover, #register:hover, #brand:hover {

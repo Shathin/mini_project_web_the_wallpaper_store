@@ -15,14 +15,14 @@
         {
             echo "<div class='col-lg-3 col-md-4 col-sm-6 col-xs-9'>
             
-              <img class='img-fluid img-thumbnail premium' src='".$wallpaper[0]."' alt=''>
+              <img class='img-fluid img-thumbnail premium pointer' src='".$wallpaper[0]."' alt=''>
 
           </div>";
         }
         else
         {    
             echo "<div class='col-lg-3 col-md-4 col-sm-6 col-xs-9'>
-              <img class='img-fluid img-thumbnail' src='".$wallpaper[0]."' alt=''>
+              <img class='img-fluid img-thumbnail pointer' src='".$wallpaper[0]."' alt=''>
             
           </div>";
         }

@@ -6,7 +6,7 @@
     }
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
     {
-        echo "<p class='navbar-text navbar-right'>Welcome ".$_SESSION['username']."! <a href='php/logout.php' id ='logout' class='navbar-link' >Logout</a></p>";
+        echo "<p class='navbar-text navbar-right'>Welcome ".$_SESSION['username']."! <a id='logout' href='php/logout.php' id ='logout' class='navbar-link' >Logout</a></p>";
     }
     else    
     {    
