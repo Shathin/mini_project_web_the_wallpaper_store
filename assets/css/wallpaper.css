@@ -19,10 +19,14 @@
     margin-right : 2em;
 }
 
-
+#wallpaper-screen {
+    padding-left : 0px;
+}
 
 #wallpaper-screen > .container{
     text-align: center;
+    margin-top : 3vh;
+    padding-left : 0px;
 }
 
 .premium
@@ -71,4 +75,37 @@
 .backFadeOut {
     filter : blur(5px); 
     pointer-events : none;
+}
+#categoryDrop {
+    display : none;
+}
+
+
+@media only screen and (max-width: 990px) {
+    .col-md-2 > .list-group {
+        display: none;
+    }
+    #categoryDrop {
+        display : block;
+    }
+    #wallpaper-screen > .container{
+        margin-top : 8vh;
+    }
+    #wallpaper-screen > .container > .col-lg-3.col-md-4.col-sm-6.col-xs-9 {
+        float : right !important;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    #wallpaper-screen >.container {
+        text-align : left;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-toggle {
+        display: none;
+    }
+
 }

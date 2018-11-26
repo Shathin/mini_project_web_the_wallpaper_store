@@ -31,7 +31,7 @@
                 ";
             }
 
-            if($current_page*9 < $_SESSION["count"]) {
+            if($current_page*12 < $_SESSION["count"]) {
                 echo "
                     <li class='next'>
                         <a href='wallpapers.php?cat=".$cat."&page=".$next_page."'>
@@ -42,7 +42,7 @@
                         </a>
                     </li>";
             }
-            else if($current_page*9 >= $_SESSION["count"]){
+            else if($current_page*12 >= $_SESSION["count"]){
                 echo "
                 <li class='next disabled'>
                     <a>

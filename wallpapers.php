@@ -69,6 +69,17 @@
                             include 'php/fetchCategory.php';
                         ?>
                     </div>
+
+                    <li class="dropdown" id="categoryDrop" >
+                        <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <div class="list-group">
+                                <?php
+                                    include 'php/fetchCategory.php';
+                                ?>
+                            </div>
+                        </ul>
+                    </li>
                 </div>
 
                 <div class="col-md-10" id="wallpaper-screen">

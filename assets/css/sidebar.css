@@ -1,6 +1,5 @@
 .list-group {
-    max-height: 80%;
-    margin-bottom: 10px;
+    max-height: 90%;
     overflow-x : hidden;
     overflow-y : auto;
     -webkit-overflow-scrolling: touch;
@@ -46,4 +45,35 @@
 .list-group > .list-group-item.active:hover{
     background : rgba(255,255,255,0.5);
     color : black;
+}
+
+.dropdown-menu {
+    background: #111;
+}
+
+#categoryDrop {
+    z-index : 1000; 
+    position : fixed;
+    top : 8vh;
+    left : 10px;
+    display : block;
+    min-width : inherit;
+    width : 100%;
+    margin-bottom : 25px;
+    text-align: left;
+}
+
+#categoryDrop > .btn.btn-default {
+    position : relative;
+    background-color : white !important;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 22px !important;
+    width : 90%;
+    left : 5vw;
+}
+
+@media only screen and (max-width: 320px) {
+    #categoryDrop {
+        top : 10vh; 
+    }
 }
