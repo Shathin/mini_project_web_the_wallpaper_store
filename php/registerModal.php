@@ -10,13 +10,19 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="username" name="username" placeholder="Enter your Username">
                     </div>
+                    <div class="form-group" id="usernameAvailability">
+                    </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="email" id="email" placeholder="Enter your E-Mail ID">
+                    </div>
+                    <div class="form-group" id="emailValidity">
                     </div>
                     <div class="form-group has-feedback">
                         <input type="password" class="form-control" id="newPassword" name="password" placeholder="Enter your Password">
                         <a id="rulesButton" data-toggle='modal' data-target='#passwordRulesModal' class="glyphicon glyphicon-info-sign form-control-feedback"></a>
-                    </div>  
+                    </div> 
+                    <div class="form-group" id="passwordValidity">
+                    </div>
                     <div class="form-group">
                         <input type="password" class="form-control" id="confirmPassword" placeholder="Retype the Password">
                     </div>  

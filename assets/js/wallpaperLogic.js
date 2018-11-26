@@ -32,7 +32,7 @@ window.setTimeout(function() {
     // Adding event listener to windows > Used for closing the pop up image when clicked anywhere outside the image
     window.addEventListener("click", function(event) {
         // If clicked anywhere outside the pop up image
-        if(event.target != popUpImg) {
+        if(event.target != popUpImg && !popUpImg.classList.contains("hidden")) {
             // If what you clicked isn't an image
             if(!(event.target instanceof Image)) {
                 var currentHeight = 87;

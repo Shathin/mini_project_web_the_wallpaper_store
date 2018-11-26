@@ -24,7 +24,7 @@
 
         <!-- Custom scripts -->
         <script src="assets/js/wallpaperLogic.js"></script>
-        <script src="assets/js/regFieldValidation.js"></script>
+        <script src="assets/js/validateRegistration.js"></script>
         <script src="assets/js/modal.js"></script>
         <!-- If possible, remove this script -->
         <script src="assets/js/workAroundScript.js"></script>
