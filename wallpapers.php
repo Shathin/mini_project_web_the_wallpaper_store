@@ -26,19 +26,17 @@
         <script src="assets/js/wallpaperLogic.js"></script>
         <script src="assets/js/validateRegistration.js"></script>
         <script src="assets/js/modal.js"></script>
-        <!-- If possible, remove this script -->
-        <script src="assets/js/workAroundScript.js"></script>
-
 
     </head>
     <body id="main">
         <?php 
             session_start(); 
         ?>
-        <nav class="navbar navbar-inverse">
+            
+        <nav class="navbar navbar-inverse" style="z-index:1001">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" >
                         <span class="sr-only"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
